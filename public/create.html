@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+  <!--external resources-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <!--local resources-->
+  <link href="/public/css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a href="/">Voting App</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/mypolls">My Polls</a></li>
+        <li><a href="/makepolls">Create polls</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="jumbotron">
+      <h1>Make your poll!</h1>
+      <div class="form-group">
+        Title:
+        <br/>
+        <input type="text" class="form-control" id="Title">
+        <div id="message"></div>
+        <br/>
+        Options(separated by lines):
+        <br/>
+        <textarea row="3" class="form-control" id="Options"></textarea>
+        <br/>
+        <div class="form-group">
+        <button class="btn btn-primary" id="submit">Submit Poll</button>
+  </div>
+  </div>
+  <script src="/common/ajax-request.js"></script>
+  <script src="/controllers/create.js"></script>
+</body>
